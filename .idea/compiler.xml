@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <bytecodeTargetLevel>
+      <module name="account-service" target="21" />
+      <module name="discovery-server" target="21" />
+      <module name="order-service" target="21" />
+      <module name="product-service" target="21" />
+      <module name="sample-spring-microservices-transactions" target="1.5" />
+      <module name="transaction-server" target="21" />
+    </bytecodeTargetLevel>
+  </component>
+</project>

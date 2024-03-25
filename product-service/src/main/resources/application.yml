@@ -1,0 +1,40 @@
+spring:
+  application:
+    name: product-service
+  datasource:
+    url: jdbc:postgresql://localhost:5432/trx
+    username: trx
+    password: trx123
+    hikari:
+      connection-timeout: 2000
+      initialization-fail-timeout: 0
+  jpa:
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+    hibernate:
+      ddl-auto: create
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
+  rabbitmq:
+    host: localhost
+    port: 5672
+    connection-timeout: 2000
+
+server.port: 0
+---
+spring:
+  rabbitmq:
+    host: rabbitmq
+  datasource:
+    url: jdbc:postgresql://postgres:5432/trx
+  config:
+    activate:
+      on-profile: docker
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://discovery-server:8761/eureka/
+
+server.port: 8080
